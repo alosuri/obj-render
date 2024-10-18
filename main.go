@@ -121,12 +121,12 @@ func main() {
 				rl.NewVector2(float32(i.triangle[0][0]*0.5*float64(screen_w)), float32(i.triangle[0][1]*0.5*float64(screen_h))),
 				rl.NewVector2(float32(i.triangle[1][0]*0.5*float64(screen_w)), float32(i.triangle[1][1]*0.5*float64(screen_h))),
 				rl.NewVector2(float32(i.triangle[2][0]*0.5*float64(screen_w)), float32(i.triangle[2][1]*0.5*float64(screen_h))),
-				rl.ColorContrast(rl.Blue, float32(i.dp)))
-			rl.DrawTriangleLines(
-				rl.NewVector2(float32(i.triangle[0][0]*0.5*float64(screen_w)), float32(i.triangle[0][1]*0.5*float64(screen_h))),
-				rl.NewVector2(float32(i.triangle[1][0]*0.5*float64(screen_w)), float32(i.triangle[1][1]*0.5*float64(screen_h))),
-				rl.NewVector2(float32(i.triangle[2][0]*0.5*float64(screen_w)), float32(i.triangle[2][1]*0.5*float64(screen_h))),
-				rl.Black)
+				rl.ColorBrightness(rl.Blue, (float32(i.dp)*2)-0.5))
+			// rl.DrawTriangleLines(
+			// 	rl.NewVector2(float32(i.triangle[0][0]*0.5*float64(screen_w)), float32(i.triangle[0][1]*0.5*float64(screen_h))),
+			// 	rl.NewVector2(float32(i.triangle[1][0]*0.5*float64(screen_w)), float32(i.triangle[1][1]*0.5*float64(screen_h))),
+			// 	rl.NewVector2(float32(i.triangle[2][0]*0.5*float64(screen_w)), float32(i.triangle[2][1]*0.5*float64(screen_h))),
+			// 	rl.Black)
 		}
 
 		rl.EndDrawing()
